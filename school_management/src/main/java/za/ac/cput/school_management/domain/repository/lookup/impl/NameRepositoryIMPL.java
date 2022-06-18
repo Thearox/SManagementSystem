@@ -1,4 +1,4 @@
-package za.ac.cput.school_management.repository.lookup.impl;
+package za.ac.cput.school_management.domain.repository.lookup.impl;
 
 /*
 Lyle Haines - 217245919

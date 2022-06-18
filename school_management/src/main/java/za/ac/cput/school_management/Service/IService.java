@@ -6,7 +6,7 @@ package za.ac.cput.school_management.Service;
  * Due Date 18 June 2022 23:59*/
 
 public interface IService <T, ID>{
-        T create(T t);
+        T save(T t);
         T read(ID id);
         T update(T t);
         void delete(ID id);

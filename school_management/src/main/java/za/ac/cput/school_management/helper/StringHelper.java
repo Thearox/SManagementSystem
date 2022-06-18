@@ -6,7 +6,7 @@ public class StringHelper {
 
     public static boolean isEmptyOrNull(String str){return StringUtils.isEmpty(str);}
 
-    public static String setEmptyIfNull(String str, String firstName){
+    public static String setEmptyIfNull(String str, String fistName){
         if(isEmptyOrNull(str)) return StringUtils.EMPTY;
         return str;
     }

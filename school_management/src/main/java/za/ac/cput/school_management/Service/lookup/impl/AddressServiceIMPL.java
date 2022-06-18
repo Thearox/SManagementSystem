@@ -7,7 +7,7 @@
 package za.ac.cput.school_management.Service.lookup.impl;
 import za.ac.cput.school_management.Service.lookup.AddressService;
 import za.ac.cput.school_management.domain.lookup.Address;
-import za.ac.cput.school_management.repository.lookup.impl.AddressRepositoryIMPL;
+import za.ac.cput.school_management.domain.repository.lookup.impl.AddressRepositoryIMPL;
 
 import java.util.List;
 
@@ -22,8 +22,8 @@ public class AddressServiceIMPL implements AddressService {
         return (AddressServiceIMPL) addressService;
     }
     @Override
-    public Address create(Address address){
-        return this.ADDRESS_REPOSITORY.create(address);
+    public Address save(Address address){
+        return this.ADDRESS_REPOSITORY.save(address);
     }
     @Override
     public Address read(String a){

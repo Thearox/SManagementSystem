@@ -17,7 +17,7 @@ public class EmployeeAddressServiceIMPL implements EmployeeAddressService {
     }
 
     @Override
-    public Employee create(Employee employee) {
+    public Employee save(Employee employee) {
         return this.repository.save(employee);
     }
 

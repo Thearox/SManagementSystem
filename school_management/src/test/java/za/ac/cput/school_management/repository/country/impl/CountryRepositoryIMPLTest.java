@@ -1,0 +1,78 @@
+package za.ac.cput.school_management.repository.country.impl;
+
+/*
+Mogammad-Redar Behardien _ 216234107
+ADP3 JUNE ASSIGNMENT
+CountryRepositoryIMPLTest.java
+*/
+//import org.checkerframework.checker.units.qual.A;
+//import org.junit.jupiter.api.AfterEach;
+//import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import za.ac.cput.school_management.domain.country.Country;
+import za.ac.cput.school_management.repository.country.CountryRepository;
+
+import java.util.List;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class CountryRepositoryIMPLTest {
+
+    private Country country;
+    private CountryRepository repository;
+
+    /*
+     * @BeforeEach void setUp(){
+     * this.country = CountryFactory.build("test-countryId","test-name");
+     * this.repository = CountryRepositoryIMPL.getCountryList();
+     * Country create = this.repository.create(this.country);
+     * Country update = this.repository.update(this.country);
+     * assertSame(this.country, create);
+     * assertSame(this.country, update);
+     * }
+     *
+     * @AfterEach void tearDown(){
+     * }
+     */
+
+    @Test
+    void create() {
+        Country save = this.repository.save(this.country);
+        System.out.println(save);
+        assertNotNull(save);
+        assertSame(this.country, save);
+    }
+
+    @Test
+    void update() {
+        Country update = this.repository.update(this.country);
+        System.out.println(update);
+        assertNotNull(update);
+        assertSame(this.country, update);
+    }
+
+    @Test
+    void read() {
+        // Country create = this.repository.create(this.country);
+        Optional<Country> read = Optional.ofNullable(this.repository.read(this.country.getId()));
+        assertAll(
+                () -> assertTrue(read.isPresent()),
+                () -> assertSame(this.country, read.get()));
+        System.out.println(read);
+    }
+
+    @Test
+    void delete() {
+        Country save = this.repository.save(this.country);
+        List<Country> countryList = this.repository.findAll();
+        assertEquals(0, countryList.size());
+        this.repository.delete(String.valueOf(save));
+    }
+
+    @Test
+    void findAll() {
+        List<Country> countryList = this.repository.findAll();
+        assertEquals(1, countryList.size());
+    }
+}

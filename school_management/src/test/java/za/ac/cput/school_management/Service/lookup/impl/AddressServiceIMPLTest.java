@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import za.ac.cput.school_management.domain.lookup.Address;
 import za.ac.cput.school_management.repository.lookup.AddressRepository;
 
+
 import java.util.List;
 import java.util.Optional;
 
@@ -14,19 +15,11 @@ class AddressServiceIMPLTest {
     private AddressRepository repository;
 
     @Test
-    void create() {
-        Address create = this.repository.save(this.address);
-        System.out.println(create);
-        assertNotNull(create);
-        assertSame(this.address, create);
-    }
-
-    @Test
-    void update() {
-        Address update = this.repository.update(this.address);
-        System.out.println(update);
-        assertNotNull(update);
-        assertSame(this.address, update);
+    void save() {
+        Address save = this.repository.save(this.address);
+        System.out.println(save);
+        assertNotNull(save);
+        assertSame(this.address, save);
     }
 
     @Test
