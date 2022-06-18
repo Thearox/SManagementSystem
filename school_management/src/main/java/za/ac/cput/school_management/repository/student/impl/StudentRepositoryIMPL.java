@@ -6,7 +6,9 @@ ADP3 JUNE ASSIGNMENT
 StudentRepositoryIMPL.java
 */
 
-public class StudentRepositoryIMPL {
+import za.ac.cput.school_management.repository.student.studentRepository;
+
+public class StudentRepositoryIMPL implements StudentRepository {
 
 
 }
