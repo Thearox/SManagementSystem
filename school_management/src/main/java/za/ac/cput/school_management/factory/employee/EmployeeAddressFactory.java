@@ -1,4 +1,4 @@
-package za.ac.cput.school_management.factory.emoloyee;
+package za.ac.cput.school_management.factory.employee;
 
 /*
     EmployeeAddressFactory.java
@@ -18,8 +18,7 @@ public class EmployeeAddressFactory {
             throw new IllegalArgumentException("staff Id is required");
 
         EmployeeAddress employeeAddress = new EmployeeAddress.Builder()
-                .setStaffId(staffId)
-                .setAddress(address)
+                .StaffId(staffId).Address(address)
                 .build();
         return employeeAddress;
     }
