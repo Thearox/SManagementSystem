@@ -11,7 +11,7 @@ import za.ac.cput.school_management.domain.student.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 @Repository
-public interface studentRepository extends JpaRepository <Student, String> {
+public interface StudentRepository extends JpaRepository <Student, String> {
 
 
 

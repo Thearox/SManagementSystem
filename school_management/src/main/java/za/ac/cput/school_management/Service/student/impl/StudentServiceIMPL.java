@@ -7,26 +7,27 @@ StudentServiceIMPL.java
 */
 
 import org.springframework.beans.factory.annotation.Autowired;
-import za.ac.cput.school_management.Service.student.studentService;
+import za.ac.cput.school_management.Service.student.StudentService;
 import za.ac.cput.school_management.domain.student.Student;
-import za.ac.cput.school_management.repository.student.studentRepository;
+import za.ac.cput.school_management.repository.student.StudentRepository;
+
 
 import java.util.List;
 import java.util.Optional;
 
 
-public class StudentServiceIMPL implements studentService {
+public class StudentServiceIMPL implements StudentService {
 
-    public static studentService studentService = null;
+    public static StudentService studentService = null;
 
     @Autowired
-    private studentRepository studentRepository;
+    private StudentRepository studentRepository;
 
     private StudentServiceIMPL() {
 
     }
 
-    public static studentService getStudentService() {
+    public static StudentService getStudentService() {
         if (studentService == null) studentService = new StudentServiceIMPL();
         return studentService;
     }

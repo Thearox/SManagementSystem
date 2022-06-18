@@ -7,7 +7,7 @@
 package za.ac.cput.school_management.Service.lookup.impl;
 import za.ac.cput.school_management.Service.lookup.AddressService;
 import za.ac.cput.school_management.domain.lookup.Address;
-import za.ac.cput.school_management.repository.lookup.impl.AddressRepositoryIMPL;
+import za.ac.cput.school_management.domain.repository.lookup.impl.AddressRepositoryIMPL;
 
 import java.util.List;
 

@@ -5,7 +5,7 @@
  * AddressRepositoryIMPL.java
  * Due Date 18 June 2022 23:59
  *
- */package za.ac.cput.school_management.repository.lookup.impl;
+ */package za.ac.cput.school_management.domain.repository.lookup.impl;
 import za.ac.cput.school_management.domain.lookup.Address;
 import java.util.ArrayList;
 import java.util.List;
