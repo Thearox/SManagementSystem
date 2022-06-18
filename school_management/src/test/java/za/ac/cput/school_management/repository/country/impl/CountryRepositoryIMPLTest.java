@@ -38,10 +38,10 @@ public class CountryRepositoryIMPLTest {
 
     @Test
     void create() {
-        Country create = this.repository.create(this.country);
-        System.out.println(create);
-        assertNotNull(create);
-        assertSame(this.country, create);
+        Country save = this.repository.save(this.country);
+        System.out.println(save);
+        assertNotNull(save);
+        assertSame(this.country, save);
     }
 
     @Test
@@ -64,10 +64,10 @@ public class CountryRepositoryIMPLTest {
 
     @Test
     void delete() {
-        Country create = this.repository.create(this.country);
+        Country save = this.repository.save(this.country);
         List<Country> countryList = this.repository.findAll();
         assertEquals(0, countryList.size());
-        this.repository.delete(String.valueOf(create));
+        this.repository.delete(String.valueOf(save));
     }
 
     @Test
