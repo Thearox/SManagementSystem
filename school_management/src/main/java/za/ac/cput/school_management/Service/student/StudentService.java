@@ -12,7 +12,7 @@ import za.ac.cput.school_management.domain.student.Student;
 import java.util.List;
 
 public interface StudentService extends IService<Student, String> {
-    Student create(Student student);
+    Student save(Student student);
 
     Student read(String s);
 

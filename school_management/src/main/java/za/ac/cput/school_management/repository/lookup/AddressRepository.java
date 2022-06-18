@@ -14,7 +14,8 @@ import java.util.Optional;
 
 @Repository
 public interface AddressRepository extends JpaRepository<Address, String> {
+    Address save(Address address);
     Address update(Address address);
-
     Optional<Address> read(String unitNumber);
+
 }

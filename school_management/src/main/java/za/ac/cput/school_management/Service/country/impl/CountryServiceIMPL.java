@@ -23,8 +23,8 @@ public class CountryServiceIMPL implements CountryService {
         return countryService;
     }
 
-    public Country create(Country country) {
-        return this.countryRepository.create(country);
+    public Country save(Country country) {
+        return this.countryRepository.save(country);
     }
 
     public Country read(String a) {

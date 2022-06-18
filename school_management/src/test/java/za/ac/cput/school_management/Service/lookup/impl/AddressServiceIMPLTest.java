@@ -15,19 +15,11 @@ class AddressServiceIMPLTest {
     private AddressRepository repository;
 
     @Test
-    void create() {
-        Address create = this.repository.save(this.address);
-        System.out.println(create);
-        assertNotNull(create);
-        assertSame(this.address, create);
-    }
-
-    @Test
-    void update() {
-        Address update = this.repository.update(this.address);
-        System.out.println(update);
-        assertNotNull(update);
-        assertSame(this.address, update);
+    void save() {
+        Address save = this.repository.save(this.address);
+        System.out.println(save);
+        assertNotNull(save);
+        assertSame(this.address, save);
     }
 
     @Test

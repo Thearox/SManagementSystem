@@ -22,8 +22,8 @@ public class AddressServiceIMPL implements AddressService {
         return (AddressServiceIMPL) addressService;
     }
     @Override
-    public Address create(Address address){
-        return this.ADDRESS_REPOSITORY.create(address);
+    public Address save(Address address){
+        return this.ADDRESS_REPOSITORY.save(address);
     }
     @Override
     public Address read(String a){

@@ -29,8 +29,8 @@ public class CityServiceIMPL implements CityService {
         return cityService;
     }
 
-    public City create(City city) {
-        return this.cityRepository.create(city);
+    public City save(City city) {
+        return this.cityRepository.save(city);
     }
 
     public City read(String a) {
