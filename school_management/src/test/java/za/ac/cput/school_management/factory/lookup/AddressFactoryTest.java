@@ -15,7 +15,7 @@ class AddressFactoryTest {
 
     @Test
     public void buildWithSuccess() {
-        Address address = AddressFactory.build("2", "Lambo", "22", "Bloom Street", "Cape Town");
+        Address address = AddressFactory.build("2", "Lambo", "22", "Bloom Street","City");
         System.out.println(address);
         assertNotNull(address);
     }

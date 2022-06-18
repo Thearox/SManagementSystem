@@ -12,7 +12,7 @@ import za.ac.cput.school_management.repository.lookup.impl.AddressRepositoryIMPL
 import java.util.List;
 
 public class AddressServiceIMPL implements AddressService {
-    private static AddressService addressService = null;
+    private static AddressService addressService ;
     private AddressRepositoryIMPL ADDRESS_REPOSITORY;
 
     private AddressServiceIMPL(){this.ADDRESS_REPOSITORY = AddressRepositoryIMPL.getAddressList();}

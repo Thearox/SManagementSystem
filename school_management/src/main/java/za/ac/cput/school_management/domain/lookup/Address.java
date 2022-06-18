@@ -5,12 +5,22 @@
  * Due Date 18 June 2022 23:59
  * */
 package za.ac.cput.school_management.domain.lookup;
+import za.ac.cput.school_management.domain.city.City;
+
 import java.util.Objects;
 public class Address {
-    private final String unitNumber, complexName, streetNumber, streetName,city;
-    /*private final City city;*/
-    private final int postalCode;
+    private String unitNumber, complexName, streetNumber, streetName;
+    private City city;
+    private int postalCode;
 
+    public Address(String unitNumber,String complexName, String streetNumber, String streetName, City city){
+        this.unitNumber = unitNumber;
+        this.complexName = complexName;
+        this.streetNumber = streetNumber;
+        this.streetName = streetName;
+        this.city = city;
+
+    }
     /*NOTE POSTAL CODE MUST BE AS INTEGER*/
     private Address(Builder builder) {
         this.unitNumber = builder.unitNumber;
@@ -19,6 +29,30 @@ public class Address {
         this.streetName = builder.streetName;
         this.postalCode = builder.postalCode;
         this.city = builder.city;
+    }
+
+    public void setUnitNumber(String unitNumber) {
+        this.unitNumber = unitNumber;
+    }
+
+    public void setComplexName(String complexName) {
+        this.complexName = complexName;
+    }
+
+    public void setStreetNumber(String streetNumber) {
+        this.streetNumber = streetNumber;
+    }
+
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
+    public void setPostalCode(int postalCode) {
+        this.postalCode = postalCode;
     }
 
     public String getUnitNumber() {
@@ -37,7 +71,7 @@ public class Address {
         return streetName;
     }
 
-    public String getCity() {
+    public City getCity() {
         return city;
     }
 
@@ -46,7 +80,8 @@ public class Address {
     }
 
     public static class Builder {
-        private String unitNumber, complexName, streetNumber, streetName, city;
+        private String unitNumber, complexName, streetNumber, streetName;
+        private City city;
         private int postalCode;
 
         public Builder unitNumber(String unitNumber) {
@@ -69,7 +104,7 @@ public class Address {
             return this;
         }
 
-        public Builder city(String city) {
+        public Builder city(City city) {
             this.city = city;
             return this;
         }
