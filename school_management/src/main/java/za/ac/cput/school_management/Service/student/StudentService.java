@@ -22,6 +22,6 @@ public interface StudentService extends IService<Student, String> {
 
     Student retrieveById(String studentId);
 
-    List<Student> getAll();
+    List<Student> findAll();
 
 }

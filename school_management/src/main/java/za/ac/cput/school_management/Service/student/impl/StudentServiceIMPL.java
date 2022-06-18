@@ -19,7 +19,6 @@ import java.util.Optional;
 public class StudentServiceIMPL implements StudentService {
 
     public static StudentService studentService = null;
-
     @Autowired
     private StudentRepository studentRepository;
 
@@ -55,7 +54,7 @@ public class StudentServiceIMPL implements StudentService {
 
     @Override
     public Student retrieveById(String studentId) {
-        List<Student> students = getAll();
+        List<Student> students = findAll();
         for(Student student : students) {
             if (student.getStudentId().equalsIgnoreCase(studentId))
                 return student;
@@ -64,7 +63,7 @@ public class StudentServiceIMPL implements StudentService {
     }
 
     @Override
-    public List<Student> getAll() {
+    public List<Student> findAll() {
         return this.studentRepository.findAll();
     }
 
