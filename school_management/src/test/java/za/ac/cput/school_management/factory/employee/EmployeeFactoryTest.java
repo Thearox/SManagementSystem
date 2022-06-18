@@ -8,6 +8,11 @@ import za.ac.cput.school_management.domain.employee.Employee;
 import za.ac.cput.school_management.domain.lookup.Name;
 import za.ac.cput.school_management.factory.lookup.NameFactory;
 
+/*
+    Wajedien Samuels (216287820)
+    10 June 2022
+ */
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class EmployeeFactoryTest {
