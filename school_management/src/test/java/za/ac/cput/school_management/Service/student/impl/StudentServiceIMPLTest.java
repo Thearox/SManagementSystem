@@ -3,11 +3,13 @@ package za.ac.cput.school_management.Service.student.impl;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.school_management.domain.student.Student;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class StudentServiceIMPLTest {
 
-    public final Student student
+    public final Student student;
+
+    StudentServiceIMPLTest(Student student) {
+        this.student = student;
+    }
 
     @Test
     void getStudentService() {

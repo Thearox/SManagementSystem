@@ -15,16 +15,16 @@ class studentFactoryTest {
     @BeforeAll
     public static void setUp() throws Exception {
         studentName = new Name.Builder()
-                .setFirstName("John")
-                .setMiddleName("The")
-                .setLastName("Smith")
+                .FirstName("John")
+                .MiddleName("The")
+                .LastName("Smith")
                 .build();
     }
 
     @Test
     @DisplayName("New Student Test")
     public void createStudent() {
-        Student student = studentFactory.createStudent("001", "johnsmith@test.com",studentName);
+        Student student = StudentFactory.createStudent("001", "johnsmith@test.com",studentName);
         assertNotNull(student);
         System.out.println(student);
         System.out.println("Test has passed");
@@ -33,7 +33,7 @@ class studentFactoryTest {
     @Test
     @DisplayName("New Student Test")
     public void createStudentNull() {
-        Student student = studentFactory.createStudent("002", null, studentName);
+        Student student = StudentFactory.createStudent("002", null, studentName);
         System.out.println(student);
         assertAll(
                 () -> assertNotNull(student),
