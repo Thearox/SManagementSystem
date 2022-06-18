@@ -10,6 +10,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import za.ac.cput.school_management.domain.lookup.Address;
 
+import java.util.Optional;
+
 @Repository
 public interface AddressRepository extends JpaRepository<Address, String> {
+    Address update(Address address);
+
+    Optional<Address> read(String unitNumber);
 }
