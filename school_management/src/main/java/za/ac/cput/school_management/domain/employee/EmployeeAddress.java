@@ -1,7 +1,7 @@
 package za.ac.cput.school_management.domain.employee;
 
 /*
-    EmployeeAddress.java
+    EmployeeAddressFactory.java
     Entity for the Employee
     Wajedien Samuels (216287820)
     10 June 2022
@@ -14,10 +14,12 @@ public class EmployeeAddress {
     private String staffId;
     private Address address;
 
-    public EmployeeAddress() {
+    public EmployeeAddress(String staffId, Address address) {
+        this.staffId = staffId;
+        this.address = address;
     }
 
-    private EmployeeAddress (Builder builder) {
+    public EmployeeAddress(Builder builder) {
 
         this.staffId = builder.staffId;
         this.address = builder.address;
@@ -27,8 +29,16 @@ public class EmployeeAddress {
         return staffId;
     }
 
+    public void setStaffId(String staffId) {
+        this.staffId = staffId;
+    }
+
     public Address getAddress() {
         return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     @Override
@@ -44,18 +54,25 @@ public class EmployeeAddress {
         private String staffId;
         private Address address;
 
-        public Builder setStaffId(String staffId) {
+        public EmployeeAddress.Builder StaffId(String staffId) {
             this.staffId = staffId;
-
             return this;
         }
 
-        public Builder setAddress(Address address) {
+        public EmployeeAddress.Builder Address (Address address) {
             this.address = address;
-
             return this;
         }
 
-        public EmployeeAddress build() {return new EmployeeAddress(this);}
+        public EmployeeAddress.Builder copy(EmployeeAddress employeeAddress) {
+
+            this.staffId = employeeAddress.staffId;
+            this.address = employeeAddress.address;
+            return this;
+        }
+
+        public EmployeeAddress build() {
+            return new EmployeeAddress(this);
+        }
     }
 }
