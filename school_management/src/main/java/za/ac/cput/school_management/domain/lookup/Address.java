@@ -7,7 +7,8 @@
 package za.ac.cput.school_management.domain.lookup;
 import java.util.Objects;
 public class Address {
-    private final String unitNumber, complexName, streetNumber, streetName, city;
+    private final String unitNumber, complexName, streetNumber, streetName,city;
+    /*private final City city;*/
     private final int postalCode;
 
     /*NOTE POSTAL CODE MUST BE AS INTEGER*/
