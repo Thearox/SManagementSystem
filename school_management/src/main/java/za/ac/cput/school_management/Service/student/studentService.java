@@ -6,13 +6,12 @@ ADP3 JUNE ASSIGNMENT
 StudentService.java
 */
 
-import za.ac.cput.school_management.Service.IService;
 import za.ac.cput.school_management.domain.student.Student;
+import za.ac.cput.school_management.Service;
 
 import java.util.List;
 
 public interface studentService extends IService<Student, String> {
-    Student retrieveById(String s);
     List<Student> getAll();
 
 }
